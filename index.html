@@ -19,6 +19,7 @@
             background-size: cover;
             background-position: center;
         }
+
         /* Aumentando el tamaño del cuadro blanco donde están las letras */
         .card {
             background: white;
@@ -29,39 +30,32 @@
             position: relative;
             z-index: 1;
         }
+
         /* Aumentando el tamaño de la imagen de los globos */
         .balloons {
             width: 180px; /* Aumentado de 150px a 180px */
             margin-top: 15px;
         }
+
+        /* Contenedor para los confetis */
+        .confetti-container {
+            position: absolute;
+            bottom: -80px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacio entre los confetis */
+            width: 100%;
+        }
+
         /* Aumentando el tamaño de los GIFs de confeti */
         .confetti {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
             width: 150px; /* Aumentado de 100px a 150px */
             height: auto;
         }
-        .confetti-left {
-            left: 10px;
-        }
-        .confetti-right {
-            right: 10px;
-        }
-        /* Ocultar el reproductor de audio */
-        audio {
-            display: none;
-        }
+
     </style>
 </head>
 <body>
-    <!-- Reproductor de audio oculto que inicia con JavaScript -->
-    <audio id="audio" autoplay>
-        <source src="audio/audio1.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-
-    <img src="https://media.tenor.com/RjjbV_M1g3QAAAAM/larissa.gif" alt="Confeti" class="confetti confetti-left">
     <div class="card">
         <h1>🎉 Feliz Aniversário, Pai! 🎂</h1>
         <p>Hoje é um dia muito especial, pois celebramos mais um ano da sua vida! Quero te desejar muita saúde, amor, felicidade e sucesso em tudo o que fizer. 
@@ -69,13 +63,10 @@
         Você merece tudo de melhor que a vida tem a oferecer! Parabéns! 🎁🥳</p>
         <img src="img/img1.jpg" alt="Balões de aniversário" class="balloons">
     </div>
-    <img src="https://i.pinimg.com/originals/0d/e5/bd/0de5bdc71ed7bd7599be0472e4249edc.gif" alt="Confeti" class="confetti confetti-right">
-
-    <script>
-        window.addEventListener('load', function() {
-            var audio = document.getElementById('audio');
-            audio.play();  // Fuerza la reproducción del audio al cargar la página
-        });
-    </script>
+    
+    <div class="confetti-container">
+        <img src="https://media.tenor.com/RjjbV_M1g3QAAAAM/larissa.gif" alt="Confeti" class="confetti">
+        <img src="https://i.pinimg.com/originals/0d/e5/bd/0de5bdc71ed7bd7599be0472e4249edc.gif" alt="Confeti" class="confetti">
+    </div>
 </body>
 </html>
